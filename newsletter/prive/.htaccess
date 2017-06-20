@@ -1,0 +1,5 @@
+AuthName "Newsletter Protégée"
+AuthType Basic
+AuthUserFile "C:\wamp64\www\newsletter\prive\.htpasswd"
+Require valid-user
+
