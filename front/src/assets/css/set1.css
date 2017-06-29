@@ -1,0 +1,98 @@
+
+.grid {
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+.grid figure {
+	margin: 2px;
+	position: relative;
+	overflow: hidden;
+	min-width: 152px;
+	max-width: 180px;
+	max-height: 216px;
+	text-align: center;
+}
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 1;
+	filter: grayscale(100%) opacity(45%);
+	-webkit-filter: grayscale(100%) opacity(45%);
+	-moz-filter: grayscale(100%) opacity(45%);
+	-o-filter: grayscale(100%) opacity(45%);
+}
+
+.grid figure figcaption {
+	color: #fff;
+	font-size: 1.1em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/*---------------*/
+/***** Oscar *****/
+/*---------------*/
+
+figure.effect-oscar {
+	background: rgba(0,0,0,0.9);
+}
+
+figure.effect-oscar img {
+	opacity: 1;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-oscar figcaption {
+	padding: 1em;
+}
+
+figure.effect-oscar figcaption::before {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	left: 10px;
+	border: 1px solid #F58C8C;
+	content: '';
+}
+
+figure.effect-oscar figcaption::before,
+figure.effect-oscar p {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+
+figure.effect-oscar:hover figcaption::before,
+figure.effect-oscar:hover p {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+figure.effect-oscar:hover img {
+	opacity: 0.6;
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+}
